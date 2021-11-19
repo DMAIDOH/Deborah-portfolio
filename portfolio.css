@@ -1,0 +1,179 @@
+/*portfolio home-page1 styling*/
+
+/*navigation menu bar <properties that all screen sizes share>*/
+.menu-bar{
+    border: 1px solid none;
+    background-color: black;
+    height: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding:0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex; /*allows content to fit in one direction or another*/
+    justify-content: space-around;
+    align-items: center; /*places items in the center of the menu bar*/
+}
+
+#deborah{
+    color: white;
+    font-weight: lighter;
+    font-size: 26px;
+    width: 15%;
+    margin-left: -250px;
+    cursor: pointer; /*design pattern to encourage viewer to click*/
+}
+
+#deborah #logo-link{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-items{
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    color: white;
+}
+
+.menu-items a{
+    text-decoration: none;
+    color:white;
+}
+#home-link{
+    color: white;
+}
+
+.menu-icon{
+    display: none; /*don't want icon visible when screen is large*/
+    width: 25px;
+    color: white;
+    cursor: pointer; /*design pattern to encourage viewer to click*/
+}
+
+/*navigation menu bar <large screens(e.g macbook)>*/
+@media screen and (min-width: 1600px) and (max-width: 5000px){
+    .menu-bar{
+        height: 100px;
+    }
+
+    #deborah{
+        font-size: 22px;
+        margin-left: -180px;
+    }
+
+    .menu-items{
+        font-size: 18px;
+        width: 50%;
+        margin-right: -200px;
+    }
+}
+
+/*navigation menu bar <medium screens>*/
+@media screen and (min-width: 800px) and (max-width: 1600px){
+    .menu-bar{
+        height: 70px;
+    }
+
+    #deborah{
+        font-size: 16px;
+        margin-left: -60px;
+        width: 20%;
+    }
+
+    .menu-items{
+        font-size: 12px;
+        width: 50%;
+        margin-right: -75px;
+    }
+}
+
+/*navigation menu bar <small screens (e.g mobile phone)>*/
+@media screen and (max-width: 800px){
+    .menu-bar{
+        height: 80px;
+    }
+
+    #deborah{
+        font-size: 16px;
+        width: 50%;
+        margin-left: -30px;
+        
+    }
+    
+    /*menu design for mobile devices, this will allow menu fall under menu-icon*/
+    .menu-items{
+        position: absolute;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: black;
+        right:0;
+        height: 220px;
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%); /*transform menu in the X direction*/
+        /*transition: transform 0.3s ease-in;*/
+    }
+
+    body{
+        overflow-x: hidden; /*hide menu body*/
+    }
+
+    /*we want the menu icon to show for small devices*/
+    .menu-icon{
+        display: block;
+    }
+}
+
+/*js event - when menu-icon is clicked menu items should show*/
+.menu-items-active{
+    transform: translateX(0);
+    overflow-x: visible;
+}
+
+
+
+
+#home a:hover{
+    color:#d1bea8;
+}
+
+#projects a:hover{
+    color: #d1bea8;
+}
+
+#resume a:hover{
+    color: #d1bea8;
+}
+
+#contact a:hover{
+    color: #d1bea8;
+}
+
+.menu-icon:hover{
+    color: #d1bea8;
+}
+
+/*footer styling
+.footer-text{
+    border: 1px solid none;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: black;
+    height: 60px;
+}*/
+
+
+/*home-page body after the navigation bar*/
+/*default body*/
+
+/*body for very large & large devices*/
+/*body for medium devices*/
+/*body for mobile device screens*/
