@@ -1,0 +1,226 @@
+body{
+    background-color: #101010;
+    height:100%;
+}
+
+/*portfolio home-page1 styling*/
+
+/*navigation menu bar <properties that all screen sizes share>*/
+.menu-bar{
+    border: 1px solid none;
+    background-color: black;
+    height: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding:0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex; /*allows content to fit in one direction or another*/
+    justify-content: space-around;
+    align-items: center; /*places items in the center of the menu bar*/
+}
+
+#deborah{
+    color: white;
+    font-weight: lighter;
+    font-size: 26px;
+    width: 15%;
+    margin-left: -250px;
+    cursor: pointer; /*design pattern to encourage viewer to click*/
+}
+
+#deborah #logo-link{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-items{
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    color: white;
+}
+
+.menu-items a{
+    text-decoration: none;
+    color:white;
+}
+
+.menu-items a:hover{
+    color: #b38b6d;
+}
+
+.nav-link{
+    color: white;
+}
+
+.menu-icon{
+    display: none; /*don't want icon visible when screen is larger than 800px*/
+}
+
+/*navigation menu bar <large screens(e.g macbook)>*/
+@media screen and (min-width: 1600px) and (max-width: 5000px){
+    .menu-bar{
+        height: 100px;
+    }
+
+    #deborah{
+        font-size: 22px;
+        margin-left: -180px;
+    }
+
+    .menu-items{
+        font-size: 18px;
+        width: 50%;
+        margin-right: -200px;
+    }
+
+}
+
+/*navigation menu bar <medium screens>*/
+@media screen and (min-width: 800px) and (max-width: 1600px){
+    .menu-bar{
+        height: 70px;
+    }
+
+    #deborah{
+        font-size: 16px;
+        margin-left: -60px;
+        width: 20%;
+    }
+
+    .menu-items{
+        font-size: 12px;
+        width: 50%;
+        margin-right: -75px;
+    }
+}
+
+/*navigation menu bar <small screens (e.g mobile phone)>*/
+@media screen and (max-width: 800px){
+    .menu-bar{
+        height: 80px;
+    }
+
+    #deborah{
+        font-size: 16px;
+        width: 50%;
+        margin-left: -30px;
+        
+    }
+
+    /*we want the menu icon to show for small devices*/
+    .menu-icon{
+        display: block;
+        width: 25px;
+        color: white;
+        cursor: pointer; /*design pattern to encourage viewer to click*/
+    }
+
+    .menu-icon:hover{
+        color:#b38b6d;
+    }
+    
+    /*menu items should not be visible*/
+    .menu-items{
+        position: fixed;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: black;
+        right:0;
+        height: 220px;
+        top: 60px;
+        display: none;
+        flex-direction: column;
+        font-size: 16px;
+        width: 25%;
+        transition: 0.3s;
+        z-index:1;
+    }
+  
+    .show{
+      display:flex;
+    }
+
+}
+
+/*home-page body after the navigation bar*/
+
+/*tag icons*/
+.tag-icon .material-icons{
+    color: #202020;
+    font-size: 15vw;
+}
+
+@media screen and (min-width: 1920px) and (max-width:2560px){
+    .tag-icon .material-icons{
+        font-size: 15vw;
+    }
+    
+    #first-tag-icon .material-icons{
+        transform: translate(15%,25%);
+    }
+    
+    #second-tag-icon .material-icons{
+        transform: translate(425%,105%);
+    }
+}
+
+@media screen and (min-width:1040px) and (max-width:1919px){
+    #first-tag-icon .material-icons{
+        font-size: 18vw;
+        color: #202020;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1039px){
+    .tag-icon .material-icons{
+        font-size: 5vw;
+    }
+    
+    #first-tag-icon .material-icons{
+        transform: translate(15%,35%);
+    }
+    
+    #second-tag-icon .material-icons{
+        transform: translate(275%,150%);
+    }
+}
+
+@media screen and (max-width:799px){
+    .tag-icon .material-icons{
+        font-size: 5vw;
+    }
+    
+    #first-tag-icon .material-icons{
+        transform: translate(15%,35%);
+    }
+    
+    #second-tag-icon .material-icons{
+        transform: translate(150%,250%);
+    }
+}
+
+/*memoji*/
+@media screen and (min-width: 1920px){
+    #memoji{
+        height:700px;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width:1040px) and (max-width:1919px){
+    #memoji{
+        height:500px;
+        position: absolute;
+        bottom:0;
+    }
+}
+
+@media screen and () and (){
+    
+}
