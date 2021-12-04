@@ -3,7 +3,7 @@ body{
     height:100%;
 }
 
-/*portfolio home-page1 styling*/
+/*portfolio home-page styling*/
 
 /*navigation menu bar <properties that all screen sizes share>*/
 .menu-bar{
@@ -24,20 +24,16 @@ body{
 
 #deborah{
     color: white;
-    font-weight: lighter;
-    font-size: 26px;
     width: 15%;
-    margin-left: -250px;
     cursor: pointer; /*design pattern to encourage viewer to click*/
 }
 
-#deborah #logo-link{
+#deborah a{
     text-decoration: none;
     color: white;
 }
 
 .menu-items{
-    font-size: 18px;
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -52,10 +48,6 @@ body{
 
 .menu-items a:hover{
     color: #b38b6d;
-}
-
-.nav-link{
-    color: white;
 }
 
 .menu-icon{
@@ -144,83 +136,53 @@ body{
     .show{
       display:flex;
     }
-
 }
 
-/*home-page body after the navigation bar*/
+/*home-page*/
 
 /*tag icons*/
-.tag-icon .material-icons{
+#tag-icon .material-icons{
     color: #202020;
-    font-size: 15vw;
+    font-size: 18vw;
+    margin-top: 5%;
 }
 
-@media screen and (min-width: 1920px) and (max-width:2560px){
-    .tag-icon .material-icons{
-        font-size: 15vw;
+#second-tag-icon .material-icons{
+    margin-left: 62%;
+}
+
+@media screen and (max-width:419px){
+    #tag-icon .material-icons{
+        font-size: 30vw;
+        margin-top: 17%;
     }
-    
-    #first-tag-icon .material-icons{
-        transform: translate(15%,25%);
-    }
-    
+
     #second-tag-icon .material-icons{
-        transform: translate(425%,105%);
+        margin-left: 35%;
     }
 }
 
-@media screen and (min-width:1040px) and (max-width:1919px){
-    #first-tag-icon .material-icons{
-        font-size: 18vw;
-        color: #202020;
-    }
-}
-
-@media screen and (min-width:800px) and (max-width:1039px){
-    .tag-icon .material-icons{
-        font-size: 5vw;
-    }
-    
-    #first-tag-icon .material-icons{
-        transform: translate(15%,35%);
-    }
-    
-    #second-tag-icon .material-icons{
-        transform: translate(275%,150%);
-    }
-}
-
-@media screen and (max-width:799px){
-    .tag-icon .material-icons{
-        font-size: 5vw;
-    }
-    
-    #first-tag-icon .material-icons{
-        transform: translate(15%,35%);
-    }
-    
-    #second-tag-icon .material-icons{
-        transform: translate(150%,250%);
-    }
-}
 
 /*memoji*/
+#memoji{
+    position: absolute;
+    bottom: 0;
+}
+
 @media screen and (min-width: 1920px){
     #memoji{
-        height:700px;
-        position: absolute;
-        bottom: 0;
+        height: 600px;
     }
 }
 
-@media screen and (min-width:1040px) and (max-width:1919px){
+@media screen and (min-width:799px) and (max-width:1919px){
     #memoji{
-        height:500px;
-        position: absolute;
-        bottom:0;
+        height:400px;
     }
 }
 
-@media screen and () and (){
-    
+@media screen and (max-width:798px){
+    #memoji{
+        height:300px;
+    }
 }
