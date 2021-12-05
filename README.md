@@ -1,3 +1,3 @@
 # Deborah-Web-Portfolio
 
-My interactive portfolio website!
+My interactive and responsive portfolio website!
