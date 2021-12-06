@@ -1,16 +1,14 @@
 body{
     background-color: #101010;
     height:100%;
+    font-family: 'Times New Roman', Times, serif;
 }
-
-/*portfolio home-page styling*/
 
 /*navigation menu bar <properties that all screen sizes share>*/
 .menu-bar{
     border: 1px solid none;
-    background-color: black;
+    background-color: #000000;
     height: 120px;
-    font-family: 'Times New Roman', Times, serif;
     position: fixed;
     left: 0;
     right: 0;
@@ -23,7 +21,7 @@ body{
 }
 
 #deborah{
-    color: white;
+    color: #fff;
     width: 15%;
     cursor: pointer; /*design pattern to encourage viewer to click*/
 }
@@ -38,7 +36,7 @@ body{
     display: flex;
     justify-content: space-around;
     width: 30%;
-    color: white;
+    color: #fff;
 }
 
 .menu-items a{
@@ -55,7 +53,7 @@ body{
 }
 
 /*navigation menu bar <large screens(e.g macbook)>*/
-@media screen and (min-width: 1600px) and (max-width: 5000px){
+@media screen and (min-width: 1600px){
     .menu-bar{
         height: 100px;
     }
@@ -70,7 +68,6 @@ body{
         width: 50%;
         margin-right: -200px;
     }
-
 }
 
 /*navigation menu bar <medium screens>*/
@@ -96,20 +93,20 @@ body{
 @media screen and (max-width: 800px){
     .menu-bar{
         height: 80px;
+        z-index: 1;
     }
 
     #deborah{
         font-size: 16px;
         width: 50%;
         margin-left: -30px;
-        
     }
 
     /*we want the menu icon to show for small devices*/
     .menu-icon{
         display: block;
         width: 25px;
-        color: white;
+        color: #fff;
         cursor: pointer; /*design pattern to encourage viewer to click*/
     }
 
@@ -138,30 +135,97 @@ body{
     }
 }
 
-/*home-page*/
+/*home-page styling*/
+/*home page text*/
+#welcome-message{
+    color: white;
+    font-size: 4vw;
+    margin-top: 9%;
+    margin-left: 24%;
+    font-weight: lighter;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(35, end) forwards,
+    blink .4s infinite; /*typewrite effect animation*/
+    border-right: .10em solid #fff; /*for blinking cursor animation*/
+    width: 0;
+}
+
+@keyframes typing{
+    from{
+        width: 0
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blink{
+    from {
+        border-color: transparent;
+    }
+
+    to{
+        border-color: #fff;
+    }
+}
 
 /*tag icons*/
 #tag-icon .material-icons{
     color: #202020;
     font-size: 18vw;
-    margin-top: 5%;
+    margin-top: -14%;
 }
 
 #second-tag-icon .material-icons{
-    margin-left: 62%;
+    margin-left: 62.5%;
 }
 
-@media screen and (max-width:419px){
+@media screen and (max-width:1000px){
+    #welcome-message{
+        font-size: 3.5vw;
+        margin-top: 14%;
+        margin-left: 28%;
+    }
+    
+    /*tag icons*/
     #tag-icon .material-icons{
-        font-size: 30vw;
-        margin-top: 17%;
+        margin-top: -13%;
+    }
+}
+
+@media screen and (max-width:700px){
+    #welcome-message{
+        font-size: 4vw;
+        margin-top: 23%;
+        margin-left: 22%;
+    }
+
+    #tag-icon .material-icons{
+        font-size: 22vw;
+        margin-top: -17%;
     }
 
     #second-tag-icon .material-icons{
-        margin-left: 35%;
+        margin-left: 50%;
     }
 }
 
+@media screen and (max-width:450px){
+    #welcome-message{
+        margin-top: 30%;
+    }
+
+    #tag-icon .material-icons{
+        font-size: 22vw;
+        margin-top: -17%;
+    }
+
+    #second-tag-icon .material-icons{
+        margin-left: 50%;
+    }
+}
 
 /*memoji*/
 #memoji{
@@ -185,4 +249,335 @@ body{
     #memoji{
         height:300px;
     }
+}
+
+/*intro/bio*/
+#about-bio{
+    margin-top: -8%;
+    margin-left: 30%;
+}
+
+#about{
+    color: #b38b6d;
+    font-size: 2.75vw;
+}
+
+#intro{
+    color: white;
+    font-size: 2vw;
+}
+
+@media screen and (max-width:798px){
+    #about{
+        font-size: 3vw;
+    }
+
+    #intro{
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (max-width:450px){
+    #about-bio{
+        margin-left: 22%;
+    }
+
+    #about{
+        font-size: 4.5vw;
+    }
+
+    #intro{
+        font-size: 2.5vw;
+        line-height: 18px;
+    }
+}
+
+/*learn more button*/
+#learn-more{
+    margin-top: 4%;
+    margin-left: 75%;
+}
+
+#learn-more-button{
+    font-size: 3vw;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fa8072;
+    border: none;
+    box-shadow: 0 4px#fff;
+}
+
+#learn-more-button:hover{
+    background-color: #fb998e;
+}
+
+#learn-more-button:active{
+    transform: translateY(4px);
+    box-shadow: 0 4px #101010;
+}
+
+button a{
+    text-decoration: none;
+    color: #321414;
+}
+
+@media screen and (max-width:800px){
+    #learn-more-button{
+        font-size: 3.5vw;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width:450px){
+    #learn-more-button{
+        font-size: 3.55vw;
+        border-radius: 5px;
+        box-shadow: 0 3px#fff;
+    }
+}
+
+/*Projects page*/
+/*project image sizing*/
+.cards{
+    border: 1px solid #b38b6d;
+    border-radius: 2%;
+    width: 30%;
+    display: inline-block;
+    margin-left: 2%;
+    box-shadow: 3px 3px 3px #707070;
+}
+
+.card-img-top{
+    border-radius: 10%;
+    width: 85%;
+    padding: 7.5%;
+}
+
+.cards a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-title{
+    color: #b38b6d;
+    font-size: 2.5vw;
+    margin: 2%;
+}
+
+.card-text{
+    font-size: 2vw;
+}
+
+#read-more{
+    color: #fa8072;
+}
+
+@media screen and (max-width:600px){
+    .cards{
+        width: 80%;
+        display: block;
+        margin: 10%;
+    }
+    
+    .card-img-top{
+        border-radius: 10%;
+        width: 90%;
+        padding: 5%;
+    }
+    
+    .card-title{
+        color: #b38b6d;
+        font-size: 5vw;
+        margin: 2%;
+    }
+    
+    .card-text{
+        font-size: 4vw;
+    }
+}
+
+/*projects details page*/
+.urmp-cards{
+    margin-top: 12%;
+    border: 1px solid #b38b6d;
+    border-radius: 3%;
+    width: 60%;
+    margin-left: 20%;
+    box-shadow: 3px 3px 3px #707070;
+}
+
+.card-img-top-urmp{
+    width: 90%;
+    height:400px;
+    padding: 5%;
+}
+
+.card-text-urmp{
+    font-size: 2vw;
+    color: #fff;
+}
+
+.card-text-urmp a{
+    text-decoration: none;
+    color: #b38b6d;
+}
+
+#go-back{
+    color: #fa8072;
+    text-decoration: none;
+    margin-left: 45%;
+}
+
+@media screen and (max-width: 600px){
+    .urmp-cards{
+        margin-top: 30%;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .card-img-top-urmp{
+        width: 90%;
+        height:200px;
+        padding: 5%;
+    }
+    
+    .card-text-urmp{
+        font-size: 4.5vw;
+    }
+}
+
+/*Resume pagee*/
+#resume-download {
+    margin-top: 11%;
+    color: #fff;
+    font-size: 2vw;
+    text-align: center;
+    text-decoration: none;
+    color: #b38b6d;
+}
+
+a{
+    text-decoration: none;
+}
+
+#file-download-icon{
+    font-size: 1.5vw;
+}
+
+#resume-img{
+    width: 70%;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+@media screen and (max-width: 700px){
+    #resume-download {
+        margin-top: 27%;
+        font-size: 3.5vw;
+    }
+    
+    #file-download-icon{
+        font-size: 3vw;
+    }
+    
+    #resume-img{
+        width: 98%;
+        margin-top: 3%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+/*contact-page*/
+#direct-contact{
+    border: 1px solid none;
+    background-color: #fff;
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5vw;
+}
+
+#direct-contact a{
+    color:#000000;
+}
+
+#direct-contact a:hover{
+    color: #b38b6d;
+}
+
+@media screen and (max-width:700px){
+    #direct-contact{
+        font-size: 2.5vw;
+    }
+}
+
+#contact-container{
+    border: 1px solid none;
+    background-color: #b38b6d;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    padding: 20px;
+    height: 700px;
+}
+
+#send-mes{
+    font-size: 2.5vw;
+}
+
+.text-input{
+    width: 100%;
+    height: 50px;
+    margin-top: 3%;
+    border-radius: 6px;
+    font-size: 1.75vw;
+}
+
+#ymessage{
+    width: 100%;
+    height: 200px;
+    margin-top: 3%;
+    border-radius: 6px;
+    font-size: 1.75vw;
+}
+
+::-webkit-input-placeholder{
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+#submit-button{
+    font-size: 3vw;
+    margin-top: 3%;
+    background-color: #fa8072;
+    border: 1px none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit-button:hover{
+    background-color: #fb998e;
+}
+
+@media screen and (max-width: 800px){
+    #contact-container{
+        height: 500px;
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 20%;
+    }
+
+    #send-mes{
+        font-size: 3vw;
+    }
+
+    ::-webkit-input-placeholder{
+        font-size: 3vw;
+        text-align: left;
+    }
+
 }

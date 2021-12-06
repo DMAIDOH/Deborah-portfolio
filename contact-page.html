@@ -32,18 +32,34 @@
     </header>
     
     <!--main body-->
-        <h2>Contact Me</h2>
+    <h1 id ="welcome-message">Contact me</h1>
 
-        <div class = "contact-me-container">
-            <p>Please fill out the form below</p>
+    <div id = "direct-contact">
+        <span id = "email"><a href = "mailto:deborahmaidoh@gmail.com">
+            deborahmaidoh@gmail.com</a></span>
+        <span id = "phone-num">207-518-0079</span>
+        <span id = "linkedin"><a href= "https://www.linkedin.com/in/deborah-maidoh-2aa8381a1/"
+            target= "blank">linkedin</a></span>
+        <span id = "github-link"><a href = "https://github.com/DMAIDOH" target= "blank">
+            Github</a></span>
+    </div>
+
+        <div id = "contact-container">
+            <h2 id = "send-mes">Send Message</h2>
             <div>
-
+                <input class="text-input" type="text" placeholder="Your name">
+            </div>
+            <div>
+                <input class="text-input" type="text" placeholder="email">
+            </div>
+            <div>
+                <textarea id="ymessage" name="subject" placeholder="Your message" ></textarea>
+            </div>
+            <div>
+                <input type= "submit" value="Submit" id= "submit-button"></button>
             </div>
         </div>
 
-
-
-
     <script type="text/javascript" src="portfolio.js"></script>
 </body>
-</html>>
+</html>

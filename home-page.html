@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="portfolio.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>My Web Portfolio</title>
+    <title>Deborah's Web Portfolio</title>
 </head>
 
 <body>
@@ -34,19 +34,32 @@
     <!--end of header-->
 
     <!--main body-->
+    <h1 id ="welcome-message">Hello, welcome to my portfolio</h1>
+
     <div id = "tag-icon">
         <span id = "first-tag-icon">
-            <i class = "material-icons">code</i>
+            <i class = "material-icons" id="code-icon">code</i>
         </span>
         <span id = "second-tag-icon">
-            <i class = "material-icons">code</i>
+            <i class = "material-icons" code-icon>code</i>
         </span>
+    </div>
+
+    <div id = "about-bio">
+        <p id ="about">About me</p>
+        <p id="intro">I am currently a Computer Science student at the University of Richmond.<br>
+                      Interested in all things technology, but I am striving to build a career in<br> 
+                      full stack web development and mobile app development.
+        </p>
+    </div>
+
+    <div id = "learn-more">
+        <button type = "button" id ="learn-more-button">
+            <a href = "projects-page.html">Learn more</button></a>
     </div>
 
     <!--memoji-->
     <img src = "memoji.jpg" alt="memoji" id = "memoji"> 
-
-    
 
     <script type="text/javascript" src="portfolio.js"></script>
 </body>
