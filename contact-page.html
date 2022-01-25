@@ -24,7 +24,8 @@
                     <li id = "contact"><a href="contact-page.html"
                         style="color: #b38b6d;">CONTACT</li></a>
                 </ul>
-                <!--small screen responsiveness, menu items will fall under icon-->
+
+                <!--small screen responsiveness, menu items will fall under this hamburger icon-->
                 <div class = "menu-icon">
                     <i class="material-icons" onclick = "showMenu()">menu</i>
                 </div>
@@ -34,32 +35,41 @@
     <!--main body-->
     <h1 id ="welcome-message">Contact me</h1>
 
+    <!--links to email, LinkedIn, etc-->
     <div id = "direct-contact">
         <span id = "email"><a href = "mailto:deborahmaidoh@gmail.com">
             deborahmaidoh@gmail.com</a></span>
         <span id = "phone-num">207-518-0079</span>
         <span id = "linkedin"><a href= "https://www.linkedin.com/in/deborah-maidoh-2aa8381a1/"
-            target= "blank">linkedin</a></span>
+            target= "blank">Linkedin</a></span>
         <span id = "github-link"><a href = "https://github.com/DMAIDOH" target= "blank">
             Github</a></span>
     </div>
 
-        <div id = "contact-container">
+
+        <!--source form/email receive API is https://formsubmit.co-->
+        <form id = "contact-container" action="https://formsubmit.co/deborahmaidoh@gmail.com" method="POST">
             <h2 id = "send-mes">Send Message</h2>
             <div>
-                <input class="text-input" type="text" placeholder="Your name">
+                <input class="text-input" type="text" id="yourName" name="yName" required="required" placeholder="Your name">
             </div>
             <div>
-                <input class="text-input" type="text" placeholder="email">
+                <input class="text-input" type="text" id="yourEmail" name="yEmail" required="required" placeholder="email">
             </div>
             <div>
-                <textarea id="ymessage" name="subject" placeholder="Your message" ></textarea>
+                <textarea id="ymessage" name="subject" id="yourMessage" name="yMessage" required="required" placeholder="Your message" ></textarea>
             </div>
             <div>
-                <input type= "submit" value="Submit" id= "submit-button"></button>
+                <input type= "submit" value="submit" id= "submit-button"></button>
             </div>
-        </div>
+            <input type="hidden" name="subject" value="New Contact Form Message">
+        </form>
 
     <script type="text/javascript" src="portfolio.js"></script>
+
+
+    <!--https://smtpjs.com is the source
+    <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    
 </body>
 </html>
