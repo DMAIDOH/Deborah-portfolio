@@ -9,28 +9,28 @@
 </head>
 
 <body>
-    <!--this is a responsive navigation menu bar-->
-    <header>
-        <div class = "menu-bar">
-            <h1 id = "deborah"><a href = "index.html" id="logo-link">
-                DEBORAH MAIDOH</a></h1>
-                <ul class = "menu-items" id = menu-items>
-                    <li id = "home"><a href="index.html" id = "home-link">
-                        HOME</a></li>
-                    <li id = "projects"><a href="projects-page.html"
-                        >PROJECTS</a></li>
-                    <li id = "resume"><a href="resume-page.html">
-                        RESUME</a></li>
-                    <li id = "contact"><a href="contact-page.html"
-                        style="color: #b38b6d;">CONTACT</li></a>
-                </ul>
+   <!--this is a responsive navigation menu bar-->
+   <header>
+    <div class = "menu-bar">
+        <h1 id = "deborah"><a href = "index.html">
+            DEBORAH MAIDOH</a></h1>
+            <ul class = "menu-items" id = menu-items>
+                <li id = "home"><a href="index.html" class = "nav-link">HOME</a></li>
+                <li id = "projects"><a href="projects-page.html" class = "nav-link">
+                    PROJECTS</a></li>
+                <li id = "resume"><a href="resume-page.html" class = "nav-link">
+                    RESUME</a></li>
+                <li id = "contact"><a href="contact-page.html" class = "nav-link" style="color: #b38b6d;">
+                    CONTACT</li></a>
+            </ul>
 
-                <!--small screen responsiveness, menu items will fall under this hamburger icon-->
-                <div class = "menu-icon">
-                    <i class="material-icons" onclick = "showMenu()">menu</i>
-                </div>
-        </div>
-    </header>
+            <!--hamburger icon-->
+            <div class = "menu-icon">
+                <i class="material-icons" onclick = "showMenu()">menu</i>
+            </div>
+    </div>
+</header>
+<!--end of header-->
     
     <!--main body-->
     <h1 id ="welcome-message">Contact me</h1>
@@ -49,6 +49,7 @@
 
         <!--source form/email receive API is https://formsubmit.co-->
         <form id = "contact-container" action="https://formsubmit.co/6df1c089ed7bb2f36b60fd53059f5156" method="POST">
+            <input type="hidden" name="_url" value="https://dmaidoh.github.io/Deborah-Portfolio/">
             <h2 id = "send-mes">Send Message</h2>
             <div>
                 <input class="text-input" type="text" id="yourName" name="Name" required="required" placeholder="Your name">
@@ -62,7 +63,6 @@
             <div>
                 <input type= "submit" value="submit" id= "submit-button"></button>
             </div>
-            <input type="hidden" name="_url" value="https://dmaidoh.github.io/Deborah-Portfolio/">
         </form>
 
     <script type="text/javascript" src="portfolio.js"></script>
