@@ -369,7 +369,9 @@ button a{
     width: 30%;
     display: inline-block;
     margin-left: 2%;
-    box-shadow: 3px 3px 3px #707070;
+    transform-style: preserve-3d;
+   /*box-shadow: 0px 25px 50px -12px #404040;*/
+   box-shadow: #404040 0px 54px 55px, #404040 0px -12px 30px, #404040 0px 4px 6px, #404040 0px 12px 13px, #404040 0px -3px 5px;
 }
 
 .card-img-top{
@@ -393,8 +395,11 @@ button a{
     font-size: 2vw;
 }
 
-#read-more{
+.read-more{
     color: #fa8072;
+    border: none #101010;
+    background-color: #101010;
+
 }
 
 @media screen and (max-width:600px){
@@ -437,21 +442,22 @@ button a{
     padding: 5%;
 }
 
-.card-text-urmp{
+.card-text-more{
     font-size: 2vw;
     color: #fff;
 }
 
-.card-text-urmp a{
+.card-text-more a{
     text-decoration: none;
     color: #b38b6d;
 }
 
-#go-back{
+/*#go-back{
+    text-align: center;
     color: #fa8072;
-    text-decoration: none;
-    margin-left: 45%;
-}
+    border: none #101010;
+    background-color: #101010;
+}*/
 
 @media screen and (max-width: 600px){
     .urmp-cards{
@@ -466,12 +472,36 @@ button a{
         padding: 5%;
     }
     
-    .card-text-urmp{
+    .card-text-more{
         font-size: 4.5vw;
     }
 }
 
-/*Resume pagee*/
+/*card flip animation
+#mood-cards-more {
+    display: none;
+    transform: rotateY(180deg);
+}
+ 
+#qids-cards-more {
+    display: none;
+}
+ 
+#urmp-cards-more {
+    display: none;
+}
+
+
+#mood-cards:active{
+    transform: rotateY(180deg);
+    transition: 1s ease-in-out;
+}*/
+
+
+
+
+
+/*Resume page*/
 #resume-download {
     margin-top: 11%;
     color: #fff;
